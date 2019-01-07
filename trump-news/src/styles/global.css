@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.shift{
+    width: 50px;
+    height: 50px;
+}
+
+.app-wrapper {
+    padding: 50px;
+    width: 700px;
+    height: 600px;
+    border-radius: 50px 50px 0 0;
+    border: 4px solid;
+    border-left-color: blue;
+    border-right-color: red;
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+
+}

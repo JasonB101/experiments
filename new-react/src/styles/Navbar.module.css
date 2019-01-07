@@ -1,0 +1,7 @@
+.aa {
+    margin: 0 50px;;
+}
+.navbar {
+    flex-direction: row;
+    justify-content: space-around;
+}

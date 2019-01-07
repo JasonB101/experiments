@@ -1,0 +1,10 @@
+.product-img {
+    width: 200px;
+    margin: 20px;
+}
+
+.products {
+    justify-content: space-evenly;
+    flex-direction: row;
+    
+}
