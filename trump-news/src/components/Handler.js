@@ -16,6 +16,7 @@ class Handler extends React.Component {
             cnnIndex: 0
         }
         this.shift = this.shift.bind(this)
+        this.goUrl = this.goUrl.bind(this)
     }
 
     shift(direction, network) {
@@ -45,13 +46,18 @@ class Handler extends React.Component {
 
     }
 
+    goUrl(url){
+        const win = window.open(url, '_blank');
+            win.focus();
+    }
+
     componentDidMount() {
-        axios.get(url("fox", "Shutdown")).then((response) => {
+        axios.get(url("fox", "Trump")).then((response) => {
             this.setState({
                 fox: response.data.articles
             })
         })
-        axios.get(url("cnn", "Shutdown")).then((response) => {
+        axios.get(url("cnn", "Trump")).then((response) => {
             this.setState({
                 cnn: response.data.articles
             })
@@ -63,10 +69,10 @@ class Handler extends React.Component {
         return (
             <div>
                 <h2>CNN</h2>
-                <Story shiftFunc={this.shift}{...this.state.fox[this.state.cnnIndex]}network="cnn" />
+                <Story onClick={(url) => this.goUrl(url)}shiftFunc={this.shift}{...this.state.fox[this.state.cnnIndex]} network="cnn" />
                 <br></br>
                 <h2>FOX</h2>
-                <Story shiftFunc={this.shift}{...this.state.cnn[this.state.foxIndex]}network="fox" />
+                <Story onClick={(url) => this.goUrl(url)}shiftFunc={this.shift}{...this.state.cnn[this.state.foxIndex]} network="fox" />
 
             </div>
         )

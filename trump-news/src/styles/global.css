@@ -39,6 +39,8 @@ h2, h3 {
 
 .contentWrapper{
     width: 700px;
+    padding: 20px;
+    cursor: pointer;
 }
 
 .shift {
@@ -50,4 +52,5 @@ h2, h3 {
     border: 1px solid black;
     font-size: 30px;
     cursor: pointer;
+    margin: 10px;
 }

@@ -4,15 +4,15 @@ import Shift from "./Shift"
 
 
 
-const Story = ({ title, urlToImage, content, shiftFunc, network }) => {
+const Story = ({ url, title, urlToImage, description, shiftFunc, network, onClick }) => {
 
         return (
             <div className="storyWrapper">
                 <Shift direction="left" onClick={() => shiftFunc("left", network)} />
-                <div className="contentWrapper">
+                <div onClick={() => onClick(url)}className="contentWrapper">
                 <h3>{title}</h3>
                 <img className="storyImage" alt="Headline Story" src={urlToImage}></img>
-                <p className="content">{content ? content.slice(0, 200) + "..." : "Story has no content"}</p>
+                <p className="description">{description ? description.slice(0, 300) + (description.length > 300 ? "..." : "") : "Story has no description"}</p>
                 </div>
                 <Shift direction="right" onClick={() => shiftFunc("right", network)} />
             </div>

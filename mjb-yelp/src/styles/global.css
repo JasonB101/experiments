@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.header {
+    grid-area: h;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: gainsboro;
+}
+
+.footer {
+    grid-area: f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: gainsboro;
+}
+
+.main-view {
+    display: flex;
+    grid-area: m;
+    overflow: auto;
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow-y: scroll;
+}
+
+#fileInput {
+    width: 200px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: c;
+    padding: 20px 10px;
+    border-right: 1px dashed black;
+}
+
+.rating {
+    color: blue;
+}
+
+.app-wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 2fr 10fr 1fr;
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "m m m m m m m m m m m m"
+        "f f f f f f f f f f f f";
+}
+
+.linkBox {
+    line-height: 20px;
+    background-color: rgb(210, 215, 210, 0.3);
+    border-radius: 15px;
+    width: 200px;
+    padding: 10px;
+    margin: 15px;
+}
