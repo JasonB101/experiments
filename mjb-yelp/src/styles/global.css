@@ -21,6 +21,32 @@
     background-color: gainsboro;
 }
 
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(0,0,0, 0.5);
+  }
+
+  .inner-popup {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom: 25%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+  }
+
+  .exit {
+    cursor: pointer;
+  }
 .main-view {
     display: flex;
     grid-area: m;
@@ -64,10 +90,12 @@
 }
 
 .linkBox {
+    max-height: 180px;
     line-height: 20px;
     background-color: rgb(210, 215, 210, 0.3);
     border-radius: 15px;
     width: 200px;
     padding: 10px;
     margin: 15px;
+    cursor: pointer;
 }
