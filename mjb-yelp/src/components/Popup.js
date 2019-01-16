@@ -4,14 +4,21 @@ import React, { Component } from 'react'
 export default class Popup extends Component {
     render() {
         return (
-            <div className="popup" onClick={this.props.handleClick}>
-                <div className="inner-popup" onClick={this.props.handleClick}> 
+            <div className="popup" id="outter-popup"  onClick={(e) => {
+                console.dir(e.target)
+                const target = e.target.id ? e.target.id : null
+                if (target === "exit-button" || target === "outter-popup"){
+                this.props.handleClick()
+                }
+                }}>
+                <div className="inner-popup" > 
                     <h2>{this.props.locationName}</h2>
-                    <p>{this.props.location}</p>
+                    <img src={this.props.thumbnail}></img>
+                    <p>{this.props.cityState}</p>
                     <p>{this.props.reviewDate}</p>
                     <p>{this.props.reviewContent}</p>
-                    <img src=""></img>
-                    <p className="exit" onClick={this.props.handleClick}>Close</p>
+                    
+                    <p className="exit" id="exit-button" >Close</p>
                 </div>
                 
             </div>

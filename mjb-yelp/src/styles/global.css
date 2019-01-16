@@ -42,6 +42,7 @@
     margin: auto;
     background: white;
     padding: 20px;
+    border-radius: 10px;
   }
 
   .exit {
@@ -90,7 +91,7 @@
 }
 
 .linkBox {
-    max-height: 180px;
+    max-height: 220px;
     line-height: 20px;
     background-color: rgb(210, 215, 210, 0.3);
     border-radius: 15px;

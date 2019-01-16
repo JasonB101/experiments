@@ -7,9 +7,7 @@ const ControlPanel = ({ readFile, ...props }) => {
 
     return (
         <div className="control-panel">
-            {/* <h3>Import CSV File</h3>
-            <input type="file" id="fileInput" onChange={readFile}></input> */}
-            <h3>Import ZipCodes File</h3>
+            <h3>Import CSV File</h3>
             <input type="file" id="fileInput" onChange={readFile}></input>
             <br></br>
             <h3>Keyword Search</h3>
