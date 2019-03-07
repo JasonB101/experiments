@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// const User = require("../models/user")
 
 const todoSchema = new Schema({
     title: {
@@ -18,6 +17,4 @@ const todoSchema = new Schema({
     }
 });
 
-
-
-module.exports = mongoose.model("Todo", todoSchema); 
+module.exports = mongoose.model("Todo", todoSchema);
